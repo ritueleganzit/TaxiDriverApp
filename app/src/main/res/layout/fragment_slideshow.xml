@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.eleganzit.taxidriverapp.utils.MyNestedScrollView
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:background="#2DEFEFEF"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <com.eleganzit.taxidriverapp.datepicker.DatePickerTimeline
+            android:id="@+id/dateTimeline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:overScrollMode="never"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="10dp"
+
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+
+            android:background="#DADADA" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/background_shape_yellow"
+                android:layout_margin="5dp"
+                android:gravity="center"
+
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_margin="5dp"
+
+                    android:src="@drawable/ic_car"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    ></ImageView>
+
+                <LinearLayout
+                    android:id="@+id/rootView"
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:layout_margin="5dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp">
+
+                    <TextView
+                        android:id="@+id/monthView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="12sp"
+
+
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="TOTAL JOBS" />
+
+                    <TextView
+                        android:id="@+id/dateView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+
+                        android:fontFamily="@font/poppins_medium"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:text="23"
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+
+                android:background="@drawable/background_shape_orange"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_margin="5dp"
+
+                    android:src="@drawable/ic_dollar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    ></ImageView>
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="10dp"
+                    android:layout_margin="5dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textSize="12sp"
+
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="EARNINGS" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:textSize="14sp"
+
+                        android:fontFamily="@font/poppins_medium"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        android:text="$ 23"
+                        />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/fav"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:overScrollMode="never"
+            android:orientation="vertical"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </LinearLayout>
+</com.eleganzit.taxidriverapp.utils.MyNestedScrollView>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+
+        <item
+            android:id="@+id/nav_myprofile"
+            android:title="@string/menu_home" />
+
+        <item
+            android:id="@+id/nav_currentTrip"
+            android:title="Current Trip" />
+
+        <item
+            android:id="@+id/nav_slideshow"
+            android:title="@string/menu_slideshow" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:title="@string/menu_gallery" />
+        <item
+            android:id="@+id/nav_payment"
+            android:title="Payment" />
+        <item
+            android:id="@+id/nav_tools"
+            android:title="@string/menu_tools" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:title="Logout" />
+    </group>
+
+
+
+</menu>
