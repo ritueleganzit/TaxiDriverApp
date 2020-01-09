@@ -6,24 +6,29 @@
     android:orientation="vertical"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:paddingStart="10dp"
+    android:paddingStart="15dp"
     android:layout_margin="5dp"
-    android:paddingEnd="10dp"
+    android:paddingEnd="15dp"
     android:paddingTop="3dp"
     android:background="@drawable/background_shape"
     android:paddingBottom="3dp">
-
     <TextView
-        android:id="@+id/monthView"
+        android:id="@+id/dayView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:gravity="center"
-        android:singleLine="true"
+        android:layout_marginTop="5dp"
+        android:ellipsize="end"
+        android:textSize="12sp"
+
         android:fontFamily="@font/poppins_regular"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:singleLine="true"
         android:textAllCaps="true"
         android:textColor="@color/black"
-        tools:text="FEB" />
+        tools:text="TUE"/>
+
 
     <TextView
         android:id="@+id/dateView"
@@ -32,25 +37,24 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:singleLine="true"
+        android:textSize="18sp"
+
         android:fontFamily="@font/poppins_regular"
         android:textAllCaps="true"
         android:textColor="@color/black"
         tools:text="23"
         />
-
     <TextView
-        android:id="@+id/dayView"
+        android:id="@+id/monthView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="5dp"
-        android:ellipsize="end"
-        android:fontFamily="@font/poppins_regular"
-        android:gravity="center_horizontal"
-        android:maxLines="1"
-        android:visibility="gone"
+        android:gravity="center"
         android:singleLine="true"
+        android:textSize="12sp"
+        android:fontFamily="@font/poppins_regular"
         android:textAllCaps="true"
         android:textColor="@color/black"
-        tools:text="TUE"/>
+        tools:text="FEB" />
+
 </LinearLayout>

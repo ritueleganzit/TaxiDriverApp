@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SignUpActivity"></activity>
+        <activity android:name=".AddVehicleActivity"></activity>
+        <activity android:name=".VehicleManagementActivity" />
+        <activity android:name=".DrivingLicenseActivity" />
+        <activity android:name=".MyDocumentsActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".HistoryActivity" />
+        <activity android:name=".EditProfileActivity" />
+        <activity android:name=".SignUpActivity" />
         <activity android:name=".MyProfileActivity" />
 
         <uses-library

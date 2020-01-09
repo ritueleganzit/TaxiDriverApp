@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:android="http://schemas.android.com/apk/res/android" >
 <com.eleganzit.taxidriverapp.utils.MyNestedScrollView
 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
     xmlns:android="http://schemas.android.com/apk/res/android">
+
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:background="#2DEFEFEF"
+        android:background="#48DADADA"
         android:orientation="vertical"
         android:layout_height="match_parent">
         <com.eleganzit.taxidriverapp.datepicker.DatePickerTimeline
@@ -19,19 +25,19 @@
             android:layout_marginTop="8dp"
             android:overScrollMode="never"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="8dp"
 
             />
         <View
             android:layout_width="match_parent"
             android:layout_height="0.5dp"
-
+android:visibility="gone"
             android:background="#DADADA" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-
+android:visibility="gone"
             android:orientation="horizontal">
             <LinearLayout
                 android:layout_width="match_parent"
@@ -166,5 +172,51 @@
         </androidx.recyclerview.widget.RecyclerView>
 
 
+
+
     </LinearLayout>
+
 </com.eleganzit.taxidriverapp.utils.MyNestedScrollView>
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:gravity="center_horizontal"
+android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+android:layout_weight="0.7"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/btn_complete"
+            android:layout_width="wrap_content"
+android:background="@drawable/background_shape_yellow_oval"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:paddingLeft="10dp"
+            android:fontFamily="@font/poppins_regular"
+android:textAllCaps="false"
+            android:paddingRight="10dp"
+            android:text="Complete Trip"></Button>
+        <Button
+            android:layout_weight="0.3"
+            android:textAllCaps="false"
+
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+
+            android:paddingLeft="10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:paddingRight="10dp"
+            android:layout_width="wrap_content"
+            android:id="@+id/btn_cancel"
+            android:background="@drawable/background_shape_orange_oval"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:text="Cancel Trip"></Button>
+    </LinearLayout>
+
+
+    </FrameLayout>

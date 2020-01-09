@@ -6,19 +6,20 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class MyProfileActivity extends AppCompatActivity {
+public class MyDocumentsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_my_profile);
-        findViewById(R.id.edit_profile).setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_my_documents);
+        findViewById(R.id.card_doc).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(MyProfileActivity.this,EditProfileActivity.class));
+                startActivity(new Intent(MyDocumentsActivity.this,DrivingLicenseActivity.class));
                 overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
             }
-        }); findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
+        });
+        findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();

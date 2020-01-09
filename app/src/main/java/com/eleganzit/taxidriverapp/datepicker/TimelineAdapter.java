@@ -1,12 +1,17 @@
 package com.eleganzit.taxidriverapp.datepicker;
 
+import android.app.Activity;
+import android.content.Context;
 import android.graphics.Color;
+import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.eleganzit.taxidriverapp.R;
@@ -17,6 +22,8 @@ import java.util.Collection;
 import java.util.Date;
 import java.util.Locale;
 
+import static java.security.AccessController.getContext;
+
 public class TimelineAdapter extends RecyclerView.Adapter<TimelineAdapter.ViewHolder> {
     private static final String TAG = "TimelineAdapter";
     private static final String[] WEEK_DAYS = DateFormatSymbols.getInstance().getShortWeekdays();
@@ -25,15 +32,19 @@ public class TimelineAdapter extends RecyclerView.Adapter<TimelineAdapter.ViewHo
     private Calendar calendar = Calendar.getInstance();
     private TimelineView timelineView;
     private Date[] deactivatedDates;
-
+Context context;
     private OnDateSelectedListener listener;
-
+Activity activity;
     private View selectedView;
     private int selectedPosition;
-
-    public TimelineAdapter(TimelineView timelineView, int selectedPosition) {
+    LinearLayoutManager manager;
+    public TimelineAdapter(Context context,LinearLayoutManager manager,TimelineView timelineView, int selectedPosition) {
         this.timelineView = timelineView;
+        this.manager = manager;
         this.selectedPosition = selectedPosition;
+        this.context = context;
+        this.activity = (Activity) context;
+
     }
 
     @NonNull
@@ -56,8 +67,29 @@ public class TimelineAdapter extends RecyclerView.Adapter<TimelineAdapter.ViewHo
 
 
         final boolean isDisabled = holder.bind(month, day, dayOfWeek, year, position);
-        holder.rootView.setBackground(timelineView.getResources().getDrawable(R.drawable.background_shape));
+        DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
+        int pxWidth = displayMetrics.widthPixels;
 
+        int centerOfScreen = pxWidth / 2 ;
+        Log.d("widthhh",""+holder.rootView.getWidth());
+
+        manager.scrollToPositionWithOffset(selectedPosition,centerOfScreen);
+        if (selectedPosition==position)
+        {
+            holder.rootView.setBackground(timelineView.getResources().getDrawable(R.drawable.bg_border));
+            holder.dateView.setTextColor(Color.WHITE);
+            holder.dayView.setTextColor(Color.WHITE);
+            holder.monthView.setTextColor(Color.WHITE);
+
+        }
+        else
+        {
+            holder.dateView.setTextColor(Color.GRAY);
+            holder.dayView.setTextColor(Color.GRAY);
+            holder.monthView.setTextColor(Color.GRAY);
+            holder.rootView.setBackground(timelineView.getResources().getDrawable(R.drawable.background_shape));
+
+        }
         holder.rootView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -128,9 +160,13 @@ public class TimelineAdapter extends RecyclerView.Adapter<TimelineAdapter.ViewHo
             monthView.setText(MONTH_NAME[month].toUpperCase(Locale.US));
             dateView.setText(String.valueOf(day));
 
+
             if (selectedPosition == position) {
-                rootView.setBackground(timelineView.getResources().getDrawable(R.drawable.background_shape));
+                Log.d("selectedPosition",position+"d"+selectedPosition+"-"+year);
+
                 selectedView = rootView;
+                selectedView.setBackground(timelineView.getResources().getDrawable(R.drawable.bg_border));
+
             } else {
                 rootView.setBackground(null);
             }

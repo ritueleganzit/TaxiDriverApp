@@ -1,60 +1,36 @@
-package com.eleganzit.taxidriverapp.ui.slideshow;
+package com.eleganzit.taxidriverapp;
 
-import android.animation.AnimatorInflater;
-import android.animation.AnimatorSet;
-import android.animation.ObjectAnimator;
-import android.animation.ValueAnimator;
-import android.graphics.Color;
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-
-import androidx.annotation.Nullable;
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.eleganzit.taxidriverapp.R;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
+
 import com.eleganzit.taxidriverapp.adapter.HistoryAdapter;
 import com.eleganzit.taxidriverapp.datepicker.DatePickerTimeline;
 import com.eleganzit.taxidriverapp.datepicker.OnDateSelectedListener;
+import com.eleganzit.taxidriverapp.ui.slideshow.SlideshowViewModel;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-import static com.eleganzit.taxidriverapp.HomeScreen.sw_button;
-import static com.eleganzit.taxidriverapp.HomeScreen.toolbar_title;
-
-public class SlideshowFragment extends Fragment {
-
+public class HistoryActivity extends AppCompatActivity {
     private SlideshowViewModel slideshowViewModel;
     RecyclerView fav;
     Button btn_complete,btn_cancel;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_history);
+        fav=findViewById(R.id.fav);
+        btn_complete=findViewById(R.id.btn_complete);
+        btn_cancel=findViewById(R.id.btn_cancel);
+        fav.setAdapter(new HistoryAdapter(fav,HistoryActivity.this));
 
-    public View onCreateView(@NonNull LayoutInflater inflater,
-                             ViewGroup container, Bundle savedInstanceState) {
-        slideshowViewModel =
-                ViewModelProviders.of(this).get(SlideshowViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
-
-        toolbar_title.setText("History");
-
-        fav=root.findViewById(R.id.fav);
-        btn_complete=root.findViewById(R.id.btn_complete);
-        btn_cancel=root.findViewById(R.id.btn_cancel);
-        fav.setAdapter(new HistoryAdapter(fav,getActivity()));
-
-        DatePickerTimeline datePickerTimeline = root.findViewById(R.id.dateTimeline);
+        DatePickerTimeline datePickerTimeline = findViewById(R.id.dateTimeline);
         final Calendar calendar = Calendar.getInstance();
         final Date date = calendar.getTime();
         int day = Integer.parseInt(new SimpleDateFormat("dd").format(date));    // always 2 digits
@@ -146,17 +122,18 @@ public class SlideshowFragment extends Fragment {
                 btn_complete.setEnabled(false);*/
             }
         });
-        return root;
-    }
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setHasOptionsMenu(true);
+        findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 
     @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu, inflater);
-        menu.clear();
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
+
     }
 }

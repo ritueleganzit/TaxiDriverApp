@@ -8,12 +8,10 @@
 
 
 
-    <fragment
-        android:id="@+id/nav_myprofile"
-        android:name="com.eleganzit.taxidriverapp.fragment.SettingsFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_settings" />
 
+    <activity android:id="@+id/nav_myprofile"
+        android:name="com.eleganzit.taxidriverapp.MyProfileActivity"
+        tools:layout="@layout/activity_my_profile"></activity>
     <fragment
         android:id="@+id/nav_gallery"
         android:name="com.eleganzit.taxidriverapp.ui.gallery.GalleryFragment"
@@ -27,12 +25,14 @@
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
 
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.eleganzit.taxidriverapp.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
 
+    <activity android:id="@+id/nav_slideshow"
+        android:name="com.eleganzit.taxidriverapp.HistoryActivity"
+        tools:layout="@layout/activity_history"></activity>
+
+    <activity android:id="@+id/nav_settings"
+        android:name="com.eleganzit.taxidriverapp.SettingsActivity"
+        tools:layout="@layout/activity_settings"></activity>
     <fragment
         android:id="@+id/nav_tools"
         android:name="com.eleganzit.taxidriverapp.ui.tools.ToolsFragment"

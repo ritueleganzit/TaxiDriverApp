@@ -17,24 +17,29 @@ import java.util.Date;
 public class TimelineView extends RecyclerView {
     private static final String TAG = "TimelineView";
     private TimelineAdapter adapter;
+    private LinearLayoutManager manager;
 
     private int monthTextColor, dateTextColor, dayTextColor, selectedColor, disabledColor;
     //    private float monthTextSize, dateTextSize, dayTextSize;
     private int year, month, date;
-
+    Context context;
     public TimelineView(@NonNull Context context) {
         super(context);
+        this.context=context;
+
         init();
 
     }
 
     public TimelineView(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        this.context=context;
         init();
     }
 
     public TimelineView(@NonNull Context context, @Nullable AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
+        this.context=context;
         init();
     }
 
@@ -44,9 +49,10 @@ public class TimelineView extends RecyclerView {
         month = 0;
         date = 1;
         setHasFixedSize(true);
-        setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL,
-                false));
-        adapter = new TimelineAdapter(this, -1);
+        manager=new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL,
+                false);
+        setLayoutManager(manager);
+        adapter = new TimelineAdapter(context,manager,this, -1);
         setAdapter(adapter);
     }
 

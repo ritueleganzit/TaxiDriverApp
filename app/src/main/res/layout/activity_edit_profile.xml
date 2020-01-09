@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimaryDark"
+        app:contentInsetEnd="0dp"
+        app:contentInsetEndWithActions="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="start"
+                android:padding="10dp"
+                android:src="@drawable/ic_back_btn" />
+
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <LinearLayout
+        android:layout_below="@+id/toolbar"
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f7f7f7"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/back"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Edit Profile"
+                android:textColor="#000"
+                android:textSize="20sp"></TextView>
+
+
+        </LinearLayout>
+        <com.eleganzit.taxidriverapp.utils.MyNestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:background="#fff"
+            android:overScrollMode="never"
+            android:fitsSystemWindows="true">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/header"
+                    android:background="#fff"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/toolbar"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:id="@+id/pic_layout"
+                            android:layout_width="115dp"
+                            android:layout_height="115dp"
+
+                            android:layout_gravity="center"
+                            android:layout_margin="15dp"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:scaleType="centerInside">
+
+
+                            <RelativeLayout
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:id="@+id/user_add"
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:padding="5dp">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/profile_pic"
+
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/images"
+                                    android:transitionName="simple_activity_transition" />
+
+                                <RelativeLayout
+android:background="@drawable/background_shape_oval"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:layout_gravity="center"
+                                    android:transitionName="simple_activity_transition" >
+                                    <ImageView
+                                        android:layout_width="25dp"
+                                        android:layout_centerInParent="true"
+                                        android:layout_height="25dp"
+                                        android:src="@drawable/photo_camera"
+                                        ></ImageView>
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+
+
+
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:paddingLeft="5dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_toLeftOf="@+id/next"
+                        android:layout_weight="0.2"
+                        android:padding="5dp"
+                        app:errorTextAppearance="@style/error_appearance"
+
+                        app:hintTextAppearance="@style/hint_appearance">
+
+                        <EditText
+                            android:id="@+id/fname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:focusable="false"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="Username"
+                            android:inputType="textPersonName"
+                            android:maxLines="1"
+                            android:paddingTop="10dp"
+                            android:text="Ritu"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColorHint="#878787"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#85B6B6B6"></View>
+
+                <RelativeLayout
+                    android:paddingLeft="5dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        app:errorTextAppearance="@style/error_appearance"
+                        app:hintTextAppearance="@style/hint_appearance">
+
+                        <EditText
+                            android:id="@+id/lname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:focusable="false"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="Email"
+                            android:inputType="textPersonName"
+                            android:maxLines="1"
+                            android:paddingTop="10dp"
+                            android:text="ritu@gmail.com"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColorHint="#878787"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#85B6B6B6"></View>
+
+                <RelativeLayout
+                    android:paddingLeft="5dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+
+                        android:padding="5dp"
+                        app:errorTextAppearance="@style/error_appearance"
+                        app:hintTextAppearance="@style/hint_appearance">
+
+                        <EditText
+                            android:id="@+id/email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:focusable="false"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="Phone"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:paddingTop="10dp"
+                            android:text="9898098980"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColorHint="#878787"
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#85B6B6B6"></View>
+
+
+
+
+                <RelativeLayout
+                    android:paddingLeft="5dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        app:errorTextAppearance="@style/error_appearance"
+
+                        app:hintTextAppearance="@style/hint_appearance">
+
+                        <EditText
+                            android:id="@+id/phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:focusable="false"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="Gender"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:paddingTop="10dp"
+                            android:text="Male"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColorHint="#878787"
+
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#85B6B6B6"></View>
+
+                <RelativeLayout
+                    android:paddingLeft="5dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        app:errorTextAppearance="@style/error_appearance"
+
+                        app:hintTextAppearance="@style/hint_appearance">
+
+                        <EditText
+                            android:id="@+id/dob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:focusable="false"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="Date of Birth"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:paddingTop="10dp"
+                            android:text="09/07/1996"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColorHint="#878787"
+
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="#85B6B6B6"></View>
+
+                <RelativeLayout
+                    android:paddingLeft="5dp"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="5dp"
+                        app:errorTextAppearance="@style/error_appearance"
+
+                        app:hintTextAppearance="@style/hint_appearance">
+
+                        <EditText
+                            android:id="@+id/languages"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:focusable="false"
+                            android:fontFamily="@font/poppins_regular"
+                            android:hint="Laguages"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:paddingTop="10dp"
+                            android:text="Hindi and English"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:textColorHint="#878787"
+
+                            android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </com.eleganzit.taxidriverapp.utils.MyNestedScrollView>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
