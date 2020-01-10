@@ -22,6 +22,8 @@
         app:contentInsetStartWithNavigation="0dp">
 
         <RelativeLayout
+            android:layout_marginLeft="5dp"
+
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -36,12 +38,14 @@
 
             <TextView
                 android:layout_centerInParent="true"
-                android:textStyle="bold"
                 android:text="History"
+                android:fontFamily="@font/poppins_medium"
+                android:textSize="18sp"
                 android:id="@+id/toolbar_title"
-                android:textColor="@color/black"
+                android:textColor="#000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
+
 
 
         </RelativeLayout>

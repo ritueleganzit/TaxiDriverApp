@@ -10,32 +10,29 @@
 
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:layout_alignParentTop="true"
-        android:background="@color/colorPrimaryDark"
+        android:id="@+id/toolbar"
         app:contentInsetEnd="0dp"
-        app:contentInsetEndWithActions="0dp"
         app:contentInsetLeft="0dp"
         app:contentInsetRight="0dp"
         app:contentInsetStart="0dp"
-        app:contentInsetStartWithNavigation="0dp">
-
+        app:contentInsetStartWithNavigation="0dp"
+        app:contentInsetEndWithActions="0dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimaryDark">
         <RelativeLayout
-            android:layout_marginLeft="5dp"
-
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
+            android:layout_height="match_parent"
+            >
             <ImageView
-                android:id="@+id/back"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
                 android:layout_gravity="start"
+                android:id="@+id/back"
                 android:padding="10dp"
-                android:src="@drawable/ic_back_btn" />
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
 
 
         </RelativeLayout>
@@ -55,6 +52,7 @@
             android:orientation="vertical">
 
 
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -68,7 +66,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/poppins_medium"
-                    android:text="Vehicle Management"
+                    android:text="Notifications"
                     android:textColor="#000"
                     android:layout_marginLeft="5dp"
 
@@ -76,42 +74,31 @@
 
 
             </LinearLayout>
-
             <com.eleganzit.taxidriverapp.utils.MyNestedScrollView
                 android:layout_width="match_parent"
                 android:fillViewport="true"
                 android:layout_height="match_parent">
 
-            <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".VehicleManagementActivity">
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/fav"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:overScrollMode="never"
-        android:orientation="vertical"
+                <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:context=".VehicleManagementActivity">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/fav"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:overScrollMode="never"
+                        android:orientation="vertical"
 
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-
-    </androidx.recyclerview.widget.RecyclerView>
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="?attr/actionBarSize"
-        android:layout_height="?attr/actionBarSize"
-        android:src="@drawable/plus_sign"
-        android:id="@+id/add_vehicle"
-        app:backgroundTint="@color/colorPrimary"
-        android:layout_margin="20dp"
-        android:layout_gravity="bottom|center">
+                    </androidx.recyclerview.widget.RecyclerView>
 
-    </de.hdodenhof.circleimageview.CircleImageView>
-</FrameLayout>
+
+                      </FrameLayout>
             </com.eleganzit.taxidriverapp.utils.MyNestedScrollView>
         </LinearLayout>
     </RelativeLayout>

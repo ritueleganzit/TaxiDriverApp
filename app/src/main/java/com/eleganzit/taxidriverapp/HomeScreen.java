@@ -11,6 +11,7 @@ import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.res.ResourcesCompat;
 import androidx.core.view.GravityCompat;
@@ -30,6 +31,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.RelativeLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -37,7 +39,7 @@ public class HomeScreen extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     public static TextView toolbar_title;
-    public static Switch sw_button;
+    public static SwitchCompat sw_button;
 
 
     @Override
@@ -120,6 +122,8 @@ public class HomeScreen extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.home_screen, menu);
+        RelativeLayout badgeLayout = (RelativeLayout) menu.findItem(R.id.myswitch).getActionView();
+       sw_button = badgeLayout.findViewById(R.id.switchForActionBar);
         return true;
     }
 

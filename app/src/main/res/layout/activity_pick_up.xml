@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/coordinator_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:overScrollMode="never"
+        android:orientation="vertical"
+
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <androidx.appcompat.widget.Toolbar
+                android:layout_alignParentTop="true"
+                android:id="@+id/toolbar"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    app:srcCompat="@drawable/ic_back_btn"
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+                </ImageView>
+                <TextView
+                    android:id="@+id/toolbar_title"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:text="Pick up"
+                    android:textStyle="bold" />
+            </androidx.appcompat.widget.Toolbar>
+
+        </LinearLayout>
+        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_weight="0.6"
+            android:layout_height="0dp">
+
+
+            <com.google.android.gms.maps.MapView
+
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/map2">
+
+            </com.google.android.gms.maps.MapView>
+
+
+            <!--<Button
+               android:background="@color/black"
+               android:text="RIDE NOW"
+               android:fontFamily="@font/poppins_regular"
+               android:textColor="@android:color/white"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_gravity="bottom"/>-->
+        </FrameLayout>
+        <androidx.cardview.widget.CardView
+            android:background="@android:color/transparent"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:cardElevation="6dp"
+            android:layout_weight="0.4"
+
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                >
+
+
+
+
+
+                <LinearLayout
+                    android:id="@+id/profileLayout"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="top"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:id="@+id/driverprofile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:src="@drawable/images"
+                            android:id="@+id/userImage"
+                            android:layout_width="50dp"
+                            android:layout_margin="5dp"
+                            android:layout_height="50dp"
+                            />
+
+
+                        <TextView
+                            android:layout_margin="5dp"
+
+                            android:id="@+id/userName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/poppins_medium"
+                            android:text="Ritu Rajan"
+                            />
+
+                    </LinearLayout>
+                    <View
+                        android:layout_marginLeft="10dp"
+                        android:background="#595959"
+                        android:layout_marginRight="10dp"
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent" />
+                    <LinearLayout
+
+                        android:id="@+id/tripdetails"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:orientation="vertical">
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/dkblack"
+
+                                android:fontFamily="@font/poppins_medium"
+                                android:text="PICK UP LOCATION"
+                                />
+
+                            <TextView
+                                android:layout_marginTop="5dp"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Eleganzit Solution Pvt Ltd"
+                                /> <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/black"
+                                android:textSize="13sp"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Wing A 309Mondeal Heights, Ison, Ahmedabad, Gujarat, India"
+                                />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:padding="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_gravity="bottom"
+
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.9"
+                        android:layout_height="wrap_content"
+
+                        >
+                        <Button
+
+                            android:id="@+id/cnfarrived"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:text="Arrived"
+
+
+                            android:fontFamily="@font/poppins_regular"
+                            android:background="@drawable/background_shape_dk"
+
+                            android:textColor="@android:color/white"></Button>
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:layout_weight="0.1"
+                        android:layout_gravity="end|center_vertical"
+
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/phonecall"                        ></ImageView>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+

@@ -11,29 +11,32 @@
 
 
     <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:id="@+id/toolbar"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimaryDark"
         app:contentInsetEnd="0dp"
+        app:contentInsetEndWithActions="0dp"
         app:contentInsetLeft="0dp"
         app:contentInsetRight="0dp"
         app:contentInsetStart="0dp"
-        app:contentInsetStartWithNavigation="0dp"
-        app:contentInsetEndWithActions="0dp"
-        android:layout_alignParentTop="true"
-        android:background="@color/colorPrimaryDark">
+        app:contentInsetStartWithNavigation="0dp">
+
         <RelativeLayout
+            android:layout_marginLeft="5dp"
+
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            >
+            android:layout_height="match_parent">
+
             <ImageView
-                android:layout_gravity="start"
                 android:id="@+id/back"
-                android:padding="10dp"
-                android:layout_centerVertical="true"
-                android:src="@drawable/ic_back_btn"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="start"
+                android:padding="10dp"
+                android:src="@drawable/ic_back_btn" />
 
 
         </RelativeLayout>
@@ -51,21 +54,25 @@
             android:background="#f7f7f7"
 
             android:orientation="vertical">
+
             <LinearLayout
-                android:background="@color/colorPrimary"
-                android:padding="8dp"
-                android:layout_below="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_below="@+id/back"
+                android:background="@color/colorPrimary"
+                android:orientation="vertical"
+                android:paddingLeft="8dp"
+                android:paddingBottom="8dp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
                     android:text="Settings"
                     android:textColor="#000"
-                    android:fontFamily="@font/poppins_medium"
-                    android:textSize="20sp"></TextView>
+                    android:layout_marginLeft="5dp"
 
+                    android:textSize="18sp"></TextView>
 
 
             </LinearLayout>

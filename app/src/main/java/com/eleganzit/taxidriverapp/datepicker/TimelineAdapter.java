@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -77,9 +78,9 @@ Activity activity;
         if (selectedPosition==position)
         {
             holder.rootView.setBackground(timelineView.getResources().getDrawable(R.drawable.bg_border));
-            holder.dateView.setTextColor(Color.WHITE);
-            holder.dayView.setTextColor(Color.WHITE);
-            holder.monthView.setTextColor(Color.WHITE);
+            holder.dateView.setTextColor(Color.GRAY);
+            holder.dayView.setTextColor(Color.GRAY);
+            holder.monthView.setTextColor(Color.GRAY);
 
         }
         else
@@ -96,7 +97,6 @@ Activity activity;
                 if (selectedView != null) {
                     //selectedView.setBackground(null);
                     selectedView.setBackground(timelineView.getResources().getDrawable(R.drawable.background_shape));
-
                 }
                 if (!isDisabled) {
                     v.setBackground(timelineView.getResources().getDrawable(R.drawable.bg_border));

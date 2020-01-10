@@ -23,6 +23,7 @@
         app:contentInsetStartWithNavigation="0dp">
 
         <RelativeLayout
+            android:layout_marginLeft="5dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -50,20 +51,24 @@
                 android:orientation="vertical">
 
                 <LinearLayout
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/back"
                     android:background="@color/colorPrimary"
                     android:orientation="vertical"
-                    android:padding="8dp">
+                    android:paddingLeft="8dp"
+                    android:paddingBottom="8dp">
 
                     <TextView
+                        android:layout_marginLeft="5dp"
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/poppins_regular"
+                        android:fontFamily="@font/poppins_medium"
                         android:text="My Profile"
                         android:textColor="#000"
-                        android:textSize="20sp"></TextView>
+                        android:textSize="18sp"></TextView>
 
 
                 </LinearLayout>
@@ -150,6 +155,7 @@ android:id="@+id/edit_profile"
                                 android:layout_centerVertical="true"
                                 android:fontFamily="@font/poppinsbold"
                                 android:padding="10dp"
+                                android:layout_marginTop="10dp"
 
                                 android:text="Edit"
                                 android:textColor="@color/colorPrimary"></TextView>

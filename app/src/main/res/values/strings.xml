@@ -20,7 +20,7 @@
     <string name="google_maps_key2">AIzaSyBfIo6MvwH7KwDr60naJfKhR2XS0osQnNM</string>
 
     <string name="menu_home">My Profile</string>
-    <string name="menu_gallery">Settngs</string>
+    <string name="menu_gallery">Settings</string>
     <string name="menu_slideshow">History</string>
     <string name="menu_tools">Help</string>
     <string name="menu_share">Invite Friends</string>

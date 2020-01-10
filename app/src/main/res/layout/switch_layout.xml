@@ -2,14 +2,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal" >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal">
 
-    <Switch
+    <androidx.appcompat.widget.SwitchCompat
         android:layout_centerVertical="true"
         android:id="@+id/switchForActionBar"
         android:layout_width="wrap_content"
+        android:padding="5dp"
+        android:layout_margin="5dp"
         android:layout_height="wrap_content"
-        android:theme="@style/CustomAppTheme"
-        android:text="" />
+        android:checked="false"
+        android:thumb="@drawable/thumb_selector"
+        app:track="@drawable/track_selector" />
 
 </RelativeLayout>

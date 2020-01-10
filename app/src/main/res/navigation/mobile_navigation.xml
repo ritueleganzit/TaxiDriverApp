@@ -29,15 +29,22 @@
     <activity android:id="@+id/nav_slideshow"
         android:name="com.eleganzit.taxidriverapp.HistoryActivity"
         tools:layout="@layout/activity_history"></activity>
+ <activity android:id="@+id/nav_noti"
+        android:name="com.eleganzit.taxidriverapp.NotificationsActivity"
+        tools:layout="@layout/activity_notifications"></activity>
+
+  <!--  <activity android:id="@+id/nav_payment"
+        android:name="com.eleganzit.taxidriverapp.MyPaymentActivity"
+        tools:layout="@layout/activity_my_payment"></activity>-->
 
     <activity android:id="@+id/nav_settings"
         android:name="com.eleganzit.taxidriverapp.SettingsActivity"
         tools:layout="@layout/activity_settings"></activity>
-    <fragment
+   <!-- <fragment
         android:id="@+id/nav_tools"
         android:name="com.eleganzit.taxidriverapp.ui.tools.ToolsFragment"
         android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
+        tools:layout="@layout/fragment_tools" />-->
 
     <fragment
         android:id="@+id/nav_share"

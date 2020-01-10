@@ -18,7 +18,9 @@
         <item name="android:elevation" tools:targetApi="lollipop">@dimen/elevation</item>
         <item name="android:textColor">@android:color/white</item>
     </style>
-
+    <style name="TransparentText" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#00000000</item>
+    </style>
     <style name="CancelButton">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">30dp</item>
@@ -66,5 +68,13 @@
 
         <item name="android:textColorPrimaryDisableOnly">@color/grey</item>
         <item name="colorAccent">@android:color/holo_green_dark</item>
+    </style>
+    
+    <style name="AppTheme.NoActionBar.TranslucentBackGround"
+        parent="AppTheme.NoActionBar">
+        <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="android:windowBackground">@color/blacktrns</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimary</item>
     </style>
 </resources>
