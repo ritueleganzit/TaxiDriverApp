@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.eleganzit.taxidriverapp">
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <application
@@ -75,6 +76,10 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key2" />
+        <service
+            android:name=".utils.FloatingViewService"
+            android:enabled="true"
+            android:exported="false"/>
     </application>
 
 </manifest>

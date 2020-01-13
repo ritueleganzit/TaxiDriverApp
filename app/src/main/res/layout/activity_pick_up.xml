@@ -90,9 +90,8 @@
             xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             app:cardElevation="6dp"
-            android:layout_weight="0.4"
 
             xmlns:app="http://schemas.android.com/apk/res-auto">
             <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -226,9 +225,9 @@
 
                             android:id="@+id/cnfarrived"
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
+                            android:layout_height="wrap_content"
                             android:text="Arrived"
-
+android:gravity="center"
 
                             android:fontFamily="@font/poppins_regular"
                             android:background="@drawable/background_shape_dk"

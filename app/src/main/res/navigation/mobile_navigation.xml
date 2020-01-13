@@ -33,9 +33,9 @@
         android:name="com.eleganzit.taxidriverapp.NotificationsActivity"
         tools:layout="@layout/activity_notifications"></activity>
 
-  <!--  <activity android:id="@+id/nav_payment"
+    <activity android:id="@+id/nav_payment"
         android:name="com.eleganzit.taxidriverapp.MyPaymentActivity"
-        tools:layout="@layout/activity_my_payment"></activity>-->
+        tools:layout="@layout/activity_my_payment"></activity>
 
     <activity android:id="@+id/nav_settings"
         android:name="com.eleganzit.taxidriverapp.SettingsActivity"
