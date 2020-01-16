@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#fff"
+    >
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolbar"
+        app:contentInsetEnd="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        app:contentInsetEndWithActions="0dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimaryDark">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:layout_gravity="start"
+                android:id="@+id/back"
+                android:padding="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f7f7f7"
+
+            android:orientation="vertical">
+            <LinearLayout
+                android:background="@color/colorPrimary"
+                android:padding="8dp"
+                android:layout_below="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add Payment"
+                    android:textColor="#000"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="20sp"></TextView>
+
+
+
+            </LinearLayout>
+            <com.eleganzit.taxidriverapp.utils.MyNestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ffffff"
+                    android:orientation="vertical"
+                    >
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_toLeftOf="@+id/next"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:layout_alignParentStart="true"
+                        app:errorTextAppearance="@style/error_appearance"
+                        android:padding="5dp"
+
+                        app:hintTextAppearance="@style/hint_appearance"
+                        >
+                        <EditText
+                            android:fontFamily="@font/poppins_regular"
+                            android:id="@+id/fname"
+                            android:layout_width="match_parent"
+                            android:maxLines="1"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:paddingTop="10dp"
+                            android:text="9898 8787 7676 6565"
+                            android:textSize="16sp"
+                            android:background="@null"
+                            android:focusable="false"
+
+                            android:inputType="textPersonName"
+                            android:layout_height="wrap_content"
+                            android:hint="Card number"
+                            android:textColorHint="#efefef"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <View
+                        android:layout_toRightOf="@+id/wheretogo"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#efefef " />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_toLeftOf="@+id/next"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            app:errorTextAppearance="@style/error_appearance"
+                            android:padding="5dp"
+                            android:layout_weight="1"
+
+                            app:hintTextAppearance="@style/hint_appearance"
+                            >
+                            <EditText
+                                android:fontFamily="@font/poppins_regular"
+                                android:layout_width="match_parent"
+                                android:maxLines="1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                android:paddingTop="10dp"
+                                android:text="05/23"
+                                android:textSize="16sp"
+                                android:background="@null"
+                                android:focusable="false"
+
+                                android:inputType="textPersonName"
+                                android:layout_height="wrap_content"
+                                android:hint="Exp. date"
+                                android:textColorHint="#efefef"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_toLeftOf="@+id/next"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_alignParentStart="true"
+                            app:errorTextAppearance="@style/error_appearance"
+                            android:padding="5dp"
+
+                            app:hintTextAppearance="@style/hint_appearance"
+                            >
+                            <EditText
+                                android:fontFamily="@font/poppins_regular"
+                                android:layout_width="match_parent"
+                                android:maxLines="1"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                                android:paddingTop="10dp"
+                                android:text="000"
+                                android:textSize="16sp"
+                                android:background="@null"
+                                android:focusable="false"
+
+                                android:inputType="textPersonName"
+                                android:layout_height="wrap_content"
+                                android:hint="CVV"
+                                android:textColorHint="#efefef"
+                                />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <View
+                        android:layout_toRightOf="@+id/wheretogo"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#efefef " />
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_toLeftOf="@+id/next"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:layout_alignParentStart="true"
+                        app:errorTextAppearance="@style/error_appearance"
+                        android:padding="5dp"
+
+                        app:hintTextAppearance="@style/hint_appearance"
+                        >
+                        <EditText
+                            android:fontFamily="@font/poppins_regular"
+                            android:layout_width="match_parent"
+                            android:maxLines="1"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                            android:paddingTop="10dp"
+                            android:text="India"
+                            android:textSize="16sp"
+                            android:background="@null"
+                            android:focusable="false"
+
+                            android:inputType="textPersonName"
+                            android:layout_height="wrap_content"
+                            android:hint="Country"
+                            android:textColorHint="#efefef"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <View
+                        android:layout_toRightOf="@+id/wheretogo"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#efefef " />
+
+                    <LinearLayout
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        >
+                        <Button
+                            android:id="@+id/cnfbtnpickup"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:text="Add Payment"
+                            android:fontFamily="@font/poppins_regular"
+                            android:background="#000"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginRight="25dp"
+                            android:layout_gravity="bottom"
+                            android:textColor="@android:color/white"></Button>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.eleganzit.taxidriverapp.utils.MyNestedScrollView>
+        </LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+</RelativeLayout>

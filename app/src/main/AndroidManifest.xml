@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.eleganzit.taxidriverapp">
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,10 +12,20 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TripLocationActivity"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".PickUpActivity"
-            android:screenOrientation="portrait"/>
+        <activity android:name=".PaymentActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity android:name=".AddPaymentActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
+        <activity
+            android:name=".TripLocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PickUpActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".AcceptRejectRideActivity"
             android:screenOrientation="portrait"
@@ -23,25 +34,34 @@
             android:name=".MyPaymentActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".NotificationsActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".AddVehicleActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".VehicleManagementActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".DrivingLicenseActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".MyDocumentsActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".SettingsActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".HistoryActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".NotificationsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddVehicleActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".VehicleManagementActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".DrivingLicenseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MyDocumentsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HistoryActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".EditProfileActivity" />
-        <activity android:name=".SignUpActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".MyProfileActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MyProfileActivity"
+            android:screenOrientation="portrait" />
 
         <uses-library
             android:name="org.apache.http.legacy"
@@ -51,18 +71,25 @@
             android:name=".HomeScreen"
             android:label="@string/title_activity_home_screen"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".AcceptRideActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".MainActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".VerficationActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ResetPasswordActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ForgotPassword"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".SplashScreen"
+        <activity
+            android:name=".AcceptRideActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".VerficationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ResetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ForgotPassword"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashScreen"
             android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -76,10 +103,11 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key2" />
+
         <service
             android:name=".utils.FloatingViewService"
             android:enabled="true"
-            android:exported="false"/>
+            android:exported="false" />
     </application>
 
 </manifest>
